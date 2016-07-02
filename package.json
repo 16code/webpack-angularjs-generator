@@ -3,7 +3,14 @@
   "version": "1.0.0",
   "description": "Webpack Angularjs Generator",
   "main": "src/index.js",
+  "engines": {
+    "node": ">=0.12.9",
+    "npm": "~2.14.9"
+  },
   "scripts": {
+    "start": "webpack-dev-server --no-info --quiet --mock",
+    "build": "rm -rf ./dist && webpack --progress --prod",
+    "precommit": "eslint --cache -c .eslintrc --quiet --ignore-path .eslintignore src/**/*.js",
     "test": "npm test"
   },
   "repository": {
@@ -20,5 +27,38 @@
   "bugs": {
     "url": "https://github.com/16code/webpack-angularjs-generator/issues"
   },
-  "homepage": "https://github.com/16code/webpack-angularjs-generator#readme"
+  "homepage": "https://github.com/16code/webpack-angularjs-generator#readme",
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "angular": "^1.5.7",
+    "angular-ui-router": "^0.3.1",
+    "oclazyload": "^1.0.9"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.10.4",
+    "babel-eslint": "^6.1.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015": "^6.9.0",
+    "css-loader": "^0.23.1",
+    "eslint": "^3.0.0",
+    "eslint-loader": "^1.4.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "html-webpack-plugin": "^2.22.0",
+    "husky": "^0.11.4",
+    "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
+    "ng-annotate-loader": "^0.1.0",
+    "path": "^0.12.7",
+    "style-loader": "^0.13.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.1",
+    "webpack-dev-server": "^1.14.1",
+    "yargs": "^4.7.1"
+  }
 }

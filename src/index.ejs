@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="<%= htmlWebpackPlugin.options.appName || 'App'%>" ng-strict-di>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta name="fragment" content="!">
+    <title><%= htmlWebpackPlugin.options.appName%></title>
+    <base href="/">
+</head>
+    <body ng-class="_class + '-page'">
+        <div ui-view></div>
+        <% if (htmlWebpackPlugin.options.devServer) { %>
+        <script src="/webpack-dev-server.js"></script>
+        <% } %>
+    </body>
+</html>

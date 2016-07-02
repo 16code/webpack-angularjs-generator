@@ -1,0 +1,46 @@
+{
+    "html": {
+        "indent_inner_html": false,
+        "indent_size": 4,
+        "indent_char": " ",
+        "brace_style": "collapse",
+        "indent_scripts": "normal",
+        "wrap_line_length": 120,
+        "wrap_attributes": "force",
+        "wrap_attributes_indent_size": 4,
+        "preserve_newlines": true,
+        "max_preserve_newlines": 10,
+        "unformatted": [
+            "a",
+            "sub",
+            "sup",
+            "b",
+            "i",
+            "u"
+        ],
+        "end_with_newline": false
+    },
+    "css": {
+        "indent_size": 4,
+        "indent_char": " ",
+        "selector_separator_newline": false,
+        "newline_between_rules": false
+    },
+    "js": {
+        "space_after_anon_function": false,
+        "wrap_line_length": 120,
+        "indent_size": 4,
+        "indent_char": " ",
+        "indent_level": 0,
+        "indent_with_tabs": false,
+        "preserve_newlines": false,
+        "max_preserve_newlines": 2,
+        "end_with_newline": true,
+        "wrap_attributes": "force",
+        "jslint_happy": true
+    },
+    "markdown": {
+        "pandoc_path": "",
+        "yaml_front_matter": true
+    }
+}
