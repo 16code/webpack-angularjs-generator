@@ -4,8 +4,8 @@
 ## 安装安装
 
 ```bash
-git clone https://github.com/16code/webpack-angularjs-generator.git
-cd webpack-angularjs-generator
+git clone https://github.com/16code/webpack-angularjs-generator.git myAngularApp
+cd myAngularApp
 npm install -g webpack eslint
 npm install
 ```
