@@ -8,14 +8,16 @@ const path = require('path'),
 
 // get shell parameters
 const isProduct = args.prod,
-    isMock = args.mock;
+    isMock = args.mock,
+    APP_NAME = JSON.stringify('App');
 
 // webpack plugin config
 const webpackPluginCommonConfig = [
-    // 定义全局标记 可以在任何js以及模板引擎文件中判断当前环境 example: if(__PROD__);
+    // 声明一些全局的变量 可以在任何js以及模板引擎文件中判断当前环境 example: if(__PROD__);
     new webpack.DefinePlugin({
         __PROD__: isProduct,
-        __MOCK__: isMock
+        __MOCK__: isMock,
+        __APP_NAME__: APP_NAME
     }),
     // 抽离公共依赖打包进 vendor.js
     new webpack.optimize.CommonsChunkPlugin({
@@ -28,7 +30,7 @@ const webpackPluginCommonConfig = [
     new HtmlWebpackPlugin({
         template: './src/index.ejs',
         chunks: ['app', 'vendor'],
-        appName: 'App',
+        appName: APP_NAME,
         title: 'Webpack Angularjs Generator',
         devServer: isMock
     }),

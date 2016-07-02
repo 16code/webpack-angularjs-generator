@@ -8,7 +8,10 @@
         "protractor": true
     },
     "globals": {
-        "angular": true
+        "angular": true,
+        '__APP_NAME__': true,
+        'isProduct': true,
+        'isMock': true,
     },
     parserOptions: {
         sourceType: "module"

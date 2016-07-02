@@ -5,4 +5,5 @@ const modules = [
     uiRouter,
     oclazyload
 ];
-export default angular.module('App', modules);
+// global __APP_NAME__:true
+export default angular.module(__APP_NAME__, modules);
