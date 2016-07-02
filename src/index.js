@@ -1,6 +1,8 @@
-// angular
-import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import oclazyload from 'oclazyload';
-console.log(oclazyload);
-export default angular.module('App', [uiRouter]);
+// 依赖模块
+const modules = [
+    uiRouter,
+    oclazyload
+];
+export default angular.module('App', modules);

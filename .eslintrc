@@ -8,8 +8,7 @@
         "protractor": true
     },
     "globals": {
-        "angular": true,
-        "NIM": true
+        "angular": true
     },
     parserOptions: {
         sourceType: "module"
